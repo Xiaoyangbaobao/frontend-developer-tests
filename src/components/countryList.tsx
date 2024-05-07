@@ -70,10 +70,8 @@ function CountryList() {
     useEffect(() => {
         fetch('https://randomuser.me/api/?results=100').then(item => {
             item.json().then(i => {
-                let result:any = {};
                 setUsers(i.results);
                 getCountryList(i.results);
-                setCountries(result);
             });
         })
     }, []);
